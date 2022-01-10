@@ -9,12 +9,14 @@ def make_label(parent, img):
     label = Label(parent, image=img)
     label.pack()
 
+def get_cards_from_deck(deck):
+    pass
+
+
 def run():
 
     #Set Up Window
-    root = Tk()
-    root.title("SpaceCards")
-    root.resizable(False, False)
+    
 
     #Image row
     frame0 = Frame(root, width=600, height=600)
@@ -48,6 +50,10 @@ def run():
     #allow for functionality to look through deck
     #next card, previous card, random card
     #flip card button
+    frame2 = Frame(root)
+    card_text_label = Label(frame2, text="Front of card", font=("Tahoma", 18)).pack()
+    flip_card_btn = Button(frame2, text="Flip Card", command=flip_card(card_text_label)).pack()
+    frame2.pack()
 
     root.eval('tk::PlaceWindow . center')
     root.mainloop()
