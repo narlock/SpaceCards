@@ -1,0 +1,5 @@
+pear,fruit
+potato,vegetable
+grape,fruit
+banana,fruit
+strawberry,fruit
