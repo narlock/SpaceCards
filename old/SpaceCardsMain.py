@@ -96,7 +96,8 @@ class SpaceCards():
     def __init__(self):
         
         #Create Window
-        self.root = Tk()
+        #self.root = Tk()
+        self.root = Toplevel()
         self.root.geometry("800x650")
         self.root.title("SpaceCards - indev 0.1")
         #self.root.resizable(False, False)

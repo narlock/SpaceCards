@@ -29,6 +29,6 @@ class Scraper:
                 file.write(card.front + "," + card.back + "\n")
 
 #Example of using Scraper to get card from website
-ob = Scraper([])
-ob.ql_to_cards('https://quizlet.com/657778880/fruit-or-vegetable-flash-cards/?new')
-ob.write_cards_to_file("quizlet")
+#ob = Scraper([])
+#ob.ql_to_cards('https://quizlet.com/657778880/fruit-or-vegetable-flash-cards/?new')
+#ob.write_cards_to_file("quizlet")
