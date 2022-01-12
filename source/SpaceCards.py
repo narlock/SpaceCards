@@ -1,3 +1,10 @@
+# SpaceCards INDEV 0.2
+# Author: Anthony Narlock
+# anthonynarlock.com
+# github.com/narlock/SpaceCards
+
+# Date: 1/12/2022
+
 import os
 from card import Card
 from Scraper import Scraper
@@ -12,27 +19,25 @@ class SpaceCards:
         self.root.geometry("400x300")
         self.root.resizable(False, False)
         self.root.title("SpaceCards INDEV 0.2")
+        self.root.iconbitmap("./assets/icon.ico")
         self.root['background'] = 'light grey'
 
-        #Attribute Variables
-        #self.decks=os.listdir('./sample-decks')
-        #self.variable=StringVar(self.root)
-        #self.variable.set(self.decks[0])
-
+        #Attributes
         self.deck_choice = ""
-
         self.cards = [Card("Front","Back")]
         self.current_card = self.cards[0]
         self.current_card_index = 0
         self.current_card_string = ""
-
         self.deck_choice = "null"
         self.import_deck_url = ""
         self.import_deck_name = ""
 
+        #Creation of Main Window Frame
         self.frame0 = Frame(self.root)
         
         #Welcome Screen
+        #Packed by default
+        #pack forgotten once Start button is pressed
         logo = PhotoImage(file="./assets/logo.png")
         self.label = Label(self.frame0, image=logo)
         self.label['background'] = 'light grey'
@@ -46,6 +51,8 @@ class SpaceCards:
         self.btn.pack()
 
         #Study Screen
+        #Is packed once Start button is pressed
+        #pack forgotten by default
         self.main_menu = Menu(self.root)
         self.root.config(menu = self.main_menu)
 
@@ -66,6 +73,7 @@ class SpaceCards:
 
         self.root.mainloop()
 
+    #Starts the program
     def start(self):
         self.root.geometry("800x400")
         self.label.pack_forget()
@@ -78,11 +86,14 @@ class SpaceCards:
         self.card_label.pack() 
         self.next_btn.pack()
 
+    #Selects the deck
+    #Creates a new toplevel window, with options to select deck from list
     def select_deck(self):
         win = Toplevel()
         win.title("Select Deck")
         win.resizable(False, False)
         win.geometry("450x100")
+        win.iconbitmap("./assets/icon.ico")
         instructions_label = Label(win, text="Select the Deck you want to study")
         instructions_label.pack()
 
@@ -100,11 +111,14 @@ class SpaceCards:
         import_btn = Button(win, text="Confirm Deck Selection", command=combine_funcs(change_deck_variable, self.change_deck, win.destroy))
         import_btn.pack()
 
+    #Imports a deck from a website
+    #Creates a new toplevel window, with options to import and instructions
     def import_deck(self):
         win = Toplevel()
         win.geometry("450x100")
         win.resizable(False, False)
         win.title("Import Deck")
+        win.iconbitmap("./assets/icon.ico")
         instructions_label = Label(win, text="Paste Link in first Entry, Enter Name of Deck in second Entry")
         instructions_label.pack()
         import_entry = Entry(win,width=40)
@@ -119,7 +133,7 @@ class SpaceCards:
         import_btn = Button(win, text="Import Deck", command=combine_funcs(send_import_deck_information, self.import_deck_from_quizlet, win.destroy))
         import_btn.pack()
 
-
+    #Method to use Scrapper
     def import_deck_from_quizlet(self):
         valid = True
         if(valid and len(self.import_deck_name) != 0):
@@ -127,14 +141,10 @@ class SpaceCards:
             scraper.ql_to_cards(self.import_deck_url)
             scraper.write_cards_to_file(self.import_deck_name)
             print("Import Successful")
-            #self.refresh_deck_list()
         else:
             print("Import unsuccessful")
 
-    def refresh_deck_list(self):
-        self.variable = StringVar(self.root)
-        self.variable.set(self.decks[0])
-
+    #Flips the card, updates the GUI
     def flip_card(self):
         if(self.current_card_string == self.current_card.back):
             self.card_label["text"] = self.current_card.front
@@ -145,6 +155,7 @@ class SpaceCards:
             self.current_card_string = self.current_card.back
             self.spacing()
     
+    #Selects the next card, updates the GUI
     def next(self):
         if(self.current_card_index == len(self.cards)-1):
             self.current_card_index = 0
@@ -160,8 +171,8 @@ class SpaceCards:
             self.current_card_string = self.current_card.front
             self.spacing()
 
+    #Changes the Deck
     def change_deck(self):
-        
         #Get deck selection from option page
         print("Deck choice: " + self.deck_choice)
         
@@ -182,6 +193,7 @@ class SpaceCards:
         self.card_label["text"] = self.current_card.front
         self.spacing()
 
+    #Ensures that card spacing fits the label
     def spacing(self):
         if(len(self.card_label["text"]) > 80):
             #Split the label to fit the screen
@@ -196,10 +208,12 @@ class SpaceCards:
                 else:
                     self.card_label["text"] += line + "-\n"
 
-
+#Main Function
 def main():
     SpaceCards()
 
+#Combine_funcs
+#Allows for multiple functions to be enabled by GUI components
 def combine_funcs(*funcs):
         def combined_func(*args, **kwargs):
             for f in funcs:
