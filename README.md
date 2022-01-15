@@ -11,5 +11,6 @@
 - Implement deck creator
 - Allow images to be used as front and back of card
 - Implement Profile: Settings, Card settings, Repetition settings
+- Create matching game: match term to definition
 
 > SpaceCards project created on January 9th, 2022

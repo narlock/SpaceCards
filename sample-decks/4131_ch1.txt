@@ -1,0 +1,27 @@
+ftp (file transfer protol),early way for transferring files over the Internet Users used FTP programs to connect to servers; look at listings of available documents; and download documents of interest
+World wide web (the web),Convenient way for computers to communicate files over the internet; created by Tim Berners-Lee in the early 1990s; contained three things: 1. text files (HTML) containing links to other text files 2. A program known as a browser for viewing HTML files 3. A set of rules known as the HTTP protocol for transferring HTML files among computers
+web page,a document that is viewed in a web browser
+website,collection of related web pages
+web server,program that serves web pages to web browsers
+HyperText markup language (HTML),standard markup language for web documents
+HyperText,text that has links to other texts (and today to images videos and more)
+markup,in HTML; special markings in the document that provide additional information to links formatting and images
+The period when the web was first developed,Early 1990s
+browser,a program for viewing web pages
+HTTP,the protocol for transferring files among computers via the web
+When was the first website published?,1991
+How many websites existed in 2001?,30 million
+How many websites existed in 2011?,350 million
+In what year did the number of Internet users surpass 3 billion?, 2015
+web browser,program that downloads an HTML document from a web server;displays the document to the user with the appropriate formatting and allows the user to interact with the document
+World Wide Web Consortium (W3C), international standards organization that traditionally has controlled a number of web standards including HTML; HTML5 was the latest HTML standard released by the W3C in 2014
+WHATWG (Web Hypertext Application Technology Working Grou),In 2019 W3C relinquished HTML standards to WHATWG; an organization that develops a variety web standards and whose members include the major browser vendors; produces the HTML Living Standard- continually evolving standard without versio numbers that replaces HTML5
+The year the idea for generating links from within one document to other documents,1945
+The year the term HyperText invented,1965
+The year the first web browser is created,1990
+The year the World Wide WEb Consortium (W3C) creatd,1994
+The year HTML 2.0 standard published,1995
+The year HTML5 standard published,2014
+The year WHATWG controls the HTML standard,2019
+A modern web page is composed of HTML CSS and JavaScript. What are each of their purposes?,HTML defines the structure and content of a web page; CSS specifies the layout and visible appearance; JavaScript describes the dynamic behaviors and actions of a web page
+

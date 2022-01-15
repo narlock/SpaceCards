@@ -1,0 +1,21 @@
+input instruction,a program gets data perhaps from a file keyboard touchscreen or network
+process instruction,a program performs computations on that data such as adding two values like x + y
+output instruction,a program puts that data somewhere such as to a file screen network etc.
+algorithm,a sequence of instructions that solves a problem
+scanner,text parser that can get numbers words or phrases from an input source such as the keyboard. Getting input is achived by first creating a scanner object via the statement: Scanner scnr = new Scanner(System.in);
+string literal,text in double quotes " "
+System.out.print,construct supports output (System.out.println starts a new output line after the outputted string literal)
+syntax error,violate a programming language's rules on how symbols can be combined to create a program. An example is forgetting to end a statement with a semicolon. Compilers will generate a message when encountering a syntax error. Known as a type of compile-time error
+logic error,programmer-made error. the program may compile fine however the wrong output was received (e.g. putting * instead of + in arithmetic expression) - also called a bug
+bit,0s and 1s - built connections of switches known as circuits to perform calcuations such as multiplying two numbers
+processors,created to process (execute) a list of desired calculations with each calculation called an instruction
+memoy, circuit that can store 0s and 1s in each of a series of thousands of addressed locations like a series of addressed mailboxes that each can store an envelope
+program (application/app),programmer-created sequence of instructions
+machine instructions,instructions represented as 0s and 1s
+executable program (executable),a sequence of machine instructions together
+assembly,created because 0s and 1s are hard to comprehend- translated these instructions into human readable instructions
+high-level language, created to support programming using formulas or algorithms, os programmer could write a formula like: F = (9/5) * C + 32. Early high-level languages included FORTRAN or ALGOL- which were more closely related to how humans thought than were machine or assembly instructions
+compilers, support high-level languages- programs that automatically translate high-level language programs into executable programs
+bytecode,Java's compiler generates an executable using machine instructions of a virtual processor-this code can be translated onto different machines (different architectures)
+virtual machine,what a real processor runs a program - executes the instructions in the bytecode-such an approach may yeild slower program execution but has the advantage of portable executables
+problem solving,creating a methodical solution to a given task
