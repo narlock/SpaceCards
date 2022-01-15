@@ -24,4 +24,13 @@ The year HTML 2.0 standard published,1995
 The year HTML5 standard published,2014
 The year WHATWG controls the HTML standard,2019
 A modern web page is composed of HTML CSS and JavaScript. What are each of their purposes?,HTML defines the structure and content of a web page; CSS specifies the layout and visible appearance; JavaScript describes the dynamic behaviors and actions of a web page
-
+packet,contains To and From IP addresses- the information to communicate and other configuration information
+ip-address (internet protocol address), a computer's unique address on the internet (like a house's unique address in the world); usually represented numerically like 198.51.100.7. A typical IP address is 32 bits-divided into 8-bit groups- each group often written as a decimal number
+IPv4 and IPv6,IPv4 is original Internet protocol- has 32 bit addresses (4 billion unique addresses)--newer version IPv6 uses 128 bit addresses-capable of 3.4 * 10^38 addresses. IPv4 and IPv6 currently co-exist and likely will for a long time
+domain name,name for an IP address such as the name wikipedia.org for the ip address 198.35.26.96; the name is easier to remember and type; capitalization of the domain name does not matter
+DNS Server (Domain Name System),When a computer sends a packet using a domain name over the Internet the first step is to contact a DNS server to conver the domain name to an IP address; the thirteen main DNS servers are called root servers
+top-level domains (TLD), .com ; .net ; .org ; .edu ; .gov ; each country is assigned with unique two-letter country code top-level domain (ccTLD) like .uk (United Kingdom) or .ru (Russia); ICANN-the organization that manages TLDs now allows companies and organizations to create customized TLDs like .church ; .pizza ; and .music
+second-level domain, such as wikipedia in wikipedia.org - a second-level domain is commonly an organization's name as in Stanford.edu (the second-level domain name is Stanford);
+third-level domain,third-level and further level domains reer to sub-computer systems local to an orgnaization (cs.stanford.edu ; the Computer Science department at Stanford); A common third-or-deeper-level domain is www- short for World Wide Web- usually referring to an organization's web server
+URL (Uniform Resource Locator),the location of a web resource on the web such as \n http://cdc.gov/alcohol/faqs.htm
+web resource,any retrrievable item- like an HTML file- image; video; CSS style sheet; etc.

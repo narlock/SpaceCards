@@ -1,4 +1,4 @@
-# SpaceCards INDEV 0.2
+# SpaceCards INDEV 0.2.1
 # Author: Anthony Narlock
 # anthonynarlock.com
 # github.com/narlock/SpaceCards
@@ -6,6 +6,8 @@
 # Date: 1/12/2022
 
 import os
+import random
+from unittest.mock import sentinel
 from card import Card
 from Scraper import Scraper
 from tkinter import *
@@ -18,7 +20,7 @@ class SpaceCards:
         self.root = Tk()
         self.root.geometry("400x300")
         self.root.resizable(False, False)
-        self.root.title("SpaceCards INDEV 0.2")
+        self.root.title("SpaceCards INDEV 0.2.1")
         self.root.iconbitmap("./assets/icon.ico")
         self.root['background'] = 'light grey'
 
@@ -31,6 +33,11 @@ class SpaceCards:
         self.deck_choice = "null"
         self.import_deck_url = ""
         self.import_deck_name = ""
+
+        self.random_index = 0
+        self.deck_size = 0
+        self.remaining_cards = 0
+        self.seen_cards = []
 
         #Creation of Main Window Frame
         self.frame0 = Frame(self.root)
@@ -68,6 +75,10 @@ class SpaceCards:
         self.next_btn['background'] = 'pink'
         self.next_btn.pack_forget()
 
+        self.random_btn = Button(self.frame0, text="Random Card", height=2, width=15, font=("Tahoma",12,"bold"), command=self.random_card)
+        self.random_btn['background'] = 'pink'
+        self.random_btn.pack_forget()
+
         self.frame0['background'] = 'light grey'
         self.frame0.pack()
 
@@ -84,7 +95,8 @@ class SpaceCards:
         self.main_menu.add_command(label="Import Deck", command=self.import_deck)
         self.current_deck_label.pack()
         self.card_label.pack() 
-        self.next_btn.pack()
+        self.next_btn.pack(side=LEFT)
+        self.random_btn.pack(side=LEFT)
 
     #Selects the deck
     #Creates a new toplevel window, with options to select deck from list
@@ -164,12 +176,56 @@ class SpaceCards:
             self.current_card_string = self.current_card.front
             self.spacing()
         else:
-            print("current card index: " + str(self.current_card_index) + "\nlen(self.cards)-1: " + str(len(self.cards) -1))
+            #print("DEBUG: current card index: " + str(self.current_card_index) + "\nlen(self.cards)-1: " + str(len(self.cards) -1))
             self.current_card_index = self.current_card_index + 1
             self.current_card = self.cards[self.current_card_index]
             self.card_label["text"] = self.current_card.front
             self.current_card_string = self.current_card.front
             self.spacing()
+
+    #Selects the next "random" card in the deck, updates the GUI
+    def random_card(self):
+        if((self.current_card_index != 0) and (self.remaining_cards == len(self.cards) - 1)):
+            # Not previously clicked random card, resets to random cards
+            self.current_card = self.cards[0]
+            self.current_card_index = 0
+            self.card_label["text"] = self.current_card.front
+            self.current_card_string = self.current_card.front
+            self.spacing()
+        elif(len(self.seen_cards) == len(self.cards)):
+            # Seen all cards with random
+            self.current_card = self.cards[0]
+            self.current_card_index = 0
+            self.remaining_cards = len(self.cards) - 1
+            self.seen_cards = [0]
+            self.card_label["text"] = self.current_card.front
+            self.current_card_string = self.current_card.front
+            self.spacing()
+        else:
+            # Pick a random card that hasn't been seen
+            self.random_index = random.randint(0, len(self.cards)-1)
+            while(self.random_index in self.seen_cards):
+                self.random_index = random.randint(0, len(self.cards)-1)
+            self.seen_cards.append(self.random_index)
+            self.remaining_cards = self.remaining_cards - 1
+            self.current_card_index = self.random_index
+            self.current_card = self.cards[self.random_index]
+            self.card_label["text"] = self.current_card.front
+            self.current_card_string = self.current_card.front
+            self.spacing()
+            #self.print_random_debug()
+
+    def print_random_debug(self):
+        print("DEBUG\n=========\n")
+        print("SEEN CARDS: ")
+        for card in self.seen_cards:
+            if card == self.seen_cards[-1]:
+                print(str(card))
+            else:
+                print(str(card) + ", ", end='')
+        print("\nREMAINING CARDS: " + str(self.remaining_cards))
+        print("\nCURRENT CARD INDEX: " + str(self.current_card_index))
+        print("\nRANDOM INDEX: " + str(self.random_index))
 
     #Changes the Deck
     def change_deck(self):
@@ -191,13 +247,17 @@ class SpaceCards:
         self.current_card_index = 0
         self.current_card_string = self.current_card.front
         self.card_label["text"] = self.current_card.front
+
+        self.deck_size = len(self.cards)
+        self.remaining_cards = len(self.cards) - 1
+        self.seen_cards = [0]
         self.spacing()
 
     #Ensures that card spacing fits the label
     def spacing(self):
         if(len(self.card_label["text"]) > 80):
             #Split the label to fit the screen
-            print("Resizing text")
+            #print("Resizing text")
             line = self.card_label["text"]
             self.card_label["text"] = ""
             n = 80

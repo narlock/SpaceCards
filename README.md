@@ -6,6 +6,7 @@
 - Flashcard Software to help develop long-term memory
 - Reads card decks from text file, then displays the card to screen with front and back
 - Scrape decks from similar web-based card programs - making them local
+- Random Card: Stores seen cards, will always show different card until deck completed
 
 ## Todo:
 - Implement deck creator
