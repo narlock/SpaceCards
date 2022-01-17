@@ -1,0 +1,18 @@
+concurrency,activities (resource sharing) appearing to occur at the "same time": processes; threads; synchronization
+asynchrony,dealing with unpredictable events (in time): exceptions; devices; i/o.
+communication,information transfer: communication; network programming
+operating system,the interface between user applications and the hardware. An OS implements a virtual machine that is easier to program than the raw machine
+referee,an operating system role: resource allocation among users; applications. Isolation of different users; applications from each other. Communication between users; applications
+illusionist,an operating system role: each application appears to have the entire machine to itself. Infinite number of processors (near) infinite amount of memory; reliable storage; reliable network transport
+Handy-person,an operating system role: libraries; UI widgets; drivers
+An example of OS roles,Referee: Prevent users from accessing each other's files without permission. Sharing disk space across the file system. Illusionist: Files can grow (nearly) arbitrarily large. Files persist even when the machine crashes in the middle of a save. Handy-person: Named directories; printf; ....
+kernel,core layer of the operating system. a library of procedures shared by all user programs- but the kernel is protected- kernel code is like the user code;but the kernel is privledged
+systems programming,low level- interfacing directly with the kernel and core system libraries (libc.a and glibc.a) -- systems programmer can use system calls directly (assembly)- alternatively language-specific libraries can be used to access system calls
+abstraction,high-level construct; useful- easy-to-use- understand; hides lower-level details; PL: class or structure data type
+process,an executing program: container for computing resources (abstraction)
+thread,an executing stream of instructions normally within a process- threads can also exist in the OS
+concurrency,(processes/threads run together) and shared resources can lead to problems
+file system,files/directories are an OS abstraction to make data storing and data sharing easier
+communication,two processes connected by a "pipe"- channel processes need to communicate
+system call,how user programs interact with the operating system
+POSIX,portable operating system interface
