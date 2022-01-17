@@ -126,6 +126,7 @@ class SpaceCards:
 
         self.main_menu.add_command(label="Select Deck", command=self.select_deck)
         self.main_menu.add_command(label="Import Deck", command=self.import_deck)
+        self.main_menu.add_command(label="Create New Deck", command=self.create_new_deck)
         self.profile_name_label.pack()
         self.current_deck_label.pack()
         self.card_label.pack() 
@@ -210,6 +211,57 @@ class SpaceCards:
 
         import_btn = Button(win, text="Import Deck", command=combine_funcs(send_import_deck_information, self.import_deck_from_quizlet, win.destroy))
         import_btn.pack()
+
+    #Opens the deck creating feature
+    #Creates a new toplevel window, with options to create a new deck
+    def create_new_deck(self):
+        win = Toplevel()
+        win.geometry("500x300")
+        win.resizable(False, False)
+        win.title("Deck Creator")
+        win.iconbitmap("./assets/icon.ico")
+
+        new_cards = []
+
+        header_label = Label(win, text="Deck Creator", font=("Tahoma",16,"bold"))
+        header_label.pack()
+        deck_name_label = Label(win, text="Enter Deck Name: ")
+        deck_name_label.pack()
+        deck_name_entry = Entry(win, width=40)
+        deck_name_entry.pack()
+
+        front_of_card_label = Label(win, text="Front: ")
+        front_of_card_label.pack()
+        front_of_card_entry = Entry(win, width=40)
+        front_of_card_entry.pack()
+        back_of_card_label = Label(win, text="Back: ")
+        back_of_card_label.pack()
+        back_of_card_entry = Entry(win, width=40)
+        back_of_card_entry.pack()
+
+        def save_card():
+            #TODO DEBUG THIS
+            new_cards.append(Card(front_of_card_entry.get(), back_of_card_entry.get()))
+            front_of_card_entry.delete(1)
+            back_of_card_entry.delete(1)
+            print("New Cards: ")
+            for card in new_cards:
+                print(card)
+
+        save_card_button = Button(win, text="Save Card", command=save_card)
+        save_card_button.pack()
+
+        def write_deck_information():
+            #TODO DEBUG THIS
+            file = open("./sample-decks/" + deck_name_entry.get() + ".txt", "w")
+            for card in new_cards:
+                if card == new_cards[-1]:
+                    file.write(card.front + ",," + card.back)
+            else:
+                file.write(card.front + ",," + card.back + "\n")
+
+        create_deck_button = Button(win, text="Create Deck",command=combine_funcs(write_deck_information, win.destroy))
+        create_deck_button.pack()
 
     #Method to use Scrapper
     def import_deck_from_quizlet(self):
