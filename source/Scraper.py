@@ -24,9 +24,9 @@ class Scraper:
         file = open("./sample-decks/" + file_name + ".txt","w")
         for card in self.cards:
             if card == self.cards[-1]:
-                file.write(card.front + "," + card.back)
+                file.write(card.front + ",," + card.back)
             else:
-                file.write(card.front + "," + card.back + "\n")
+                file.write(card.front + ",," + card.back + "\n")
 
 #Example of using Scraper to get card from website
 #ob = Scraper([])

@@ -3,7 +3,7 @@
 # anthonynarlock.com
 # github.com/narlock/SpaceCards
 
-# Date: 1/12/2022
+# Date: 1/17/2022
 
 import os
 import random
@@ -317,7 +317,7 @@ class SpaceCards:
             lines = [line.rstrip() for line in lines]
             self.cards = []
             for line in lines:
-                x = line.split(",")
+                x = line.split(",,")
                 self.cards.append(Card(x[0],x[1]))
 
             #Init Deck
@@ -333,12 +333,12 @@ class SpaceCards:
 
     #Ensures that card spacing fits the label
     def spacing(self):
-        if(len(self.card_label["text"]) > 80):
+        if(len(self.card_label["text"]) > 85):
             #Split the label to fit the screen
             #print("Resizing text")
             line = self.card_label["text"]
             self.card_label["text"] = ""
-            n = 80
+            n = 85
             lines = [line[i:i+n] for i in range(0, len(line), n)]
             for line in lines:
                 if(line == lines[-1]):
