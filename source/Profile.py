@@ -4,6 +4,5 @@
 from Settings import Settings
 
 class Profile:
-    def __init__(self, username, settings):
+    def __init__(self, username):
         self.username = username
-        self.settings = settings
