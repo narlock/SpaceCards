@@ -1,10 +1,11 @@
-# SpaceCards INDEV 0.2.1
+# SpaceCards INDEV 0.2.5
 # Author: Anthony Narlock
 # anthonynarlock.com
 # github.com/narlock/SpaceCards
 
 # Date: 1/17/2022
 
+from asyncore import write
 import os
 import random
 from unittest.mock import sentinel
@@ -21,7 +22,7 @@ class SpaceCards:
         self.root = Tk()
         self.root.geometry("400x385")
         self.root.resizable(False, False)
-        self.root.title("SpaceCards INDEV 0.2.1")
+        self.root.title("SpaceCards INDEV")
         self.root.iconbitmap("./assets/icon.ico")
         self.root['background'] = 'light grey'
 
@@ -149,7 +150,24 @@ class SpaceCards:
 
     #TODO Opens dialog window to create a profile, will write profile information to file
     def create_profile(self):
-        pass
+        win = Toplevel()
+        win.title("Create Profile")
+        win.resizable(False,False)
+        win.geometry("450x200")
+        win.iconbitmap("./assets/icon.ico")
+        title_label = Label(win, text="Create Profile", font=("Tahoma",16,"bold"))
+        title_label.pack()
+        name_label = Label(win, text="Profile name: ")
+        name_label.pack()
+        name_entry = Entry(win, width=30)
+        name_entry.pack()
+        
+        def write_profile_to_system():
+            file = open("./profiles/" + name_entry.get() + ".txt", "w")
+            file.write(name_entry.get())
+
+        save_profile_button = Button(win, text="Save Profile", command=combine_funcs(write_profile_to_system, win.destroy))
+        save_profile_button.pack()
 
     #TODO Opens the spaced repetition mode
     #can't enter if no deck
