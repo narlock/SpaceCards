@@ -1,0 +1,23 @@
+HTML,,a textual language for creating web pages.
+HyperText,,Text that contaions connections to other documents
+Markup,,Part of a document that explains how to interpret or structure other parts of the document
+Language,,A set of rules describing how to write HTML
+element,,a single HTML structure, represented with HTML tags.
+HTML tag,,a markup instruction identifies by <, a tag name, and a >.
+opening tag,,indicates the starting point in the document where the tag takes effect.
+closing tag,,indicates the ending point in the document where the tag stops having an effect
+<!DOCTYPE html> declaration,,instructs the web browser about what type of document follows
+<html> opening and closing tags,,enclose everything but the <!DOCTYPE html> declaration. <html lang="en"> indicates that the document's language is English.
+<meta> tag,,specifies metadata, which is data that describes the document's data. <meta charset="UTF-8"> describes how characters are represented in the HTMl document. Additional <meta> tags may be used to indicate when the document was saved, who the author is, etc.
+<title> opening and closing tags,,enclose the name of the document. The title is usually displaye din the titlebar of the browser, is used by search engines, and is used for bookmarking
+<body> opening and closnig tags,,enclose all elements and content to be rendered in the browser.
+tag attribute,,provides additional information about the tag and is included only in the opening tag. An attribute has a name and a value using form: name="value"
+void element,,an element that only needs an opening tag. (e.g.: <img>, <input>)
+Quirks mode,,browser rendering mode that renders a web page using non-standard layout rules emulating older web browsers. Uses standards mode: html living standard
+UTF-8,,a common character encoding that describes characters used by most of the world's languages. (UTF-8 even includes fictional languages and emoji)
+<head> tag,,used to contain the document title, document metadata and various other elements typically not displayed.
+T/F: To see how a web page is constructed, a user can view the page source in the browser,,True: most desktop browsers have an option to view the web page's source, which shows the HTML loaded by the browser
+T/F: To copy the functionality of another web page found on the web, a user can just copy the HTML from the view source page,,False: althought copying and pasting may create an identical page structure, the web page may not function identically because the copied page may be missing the images, CSS, and JavaScript necessary for the page to function properly. Also, copying a web page's contents may violate copyright law.
+T/F: Viewing a web page's source and viewing the browser's internal web page representation always yields identical results,,False: the web page's HTML and the browser's internal representation may differ: ex: the internal representaion always includes the head element, but a web page may leave out <head> tags. Some improper use of HTML tags is also corrected in the browser's internal representation.
+deprecated feature,,a feature that is no longer part of the language that is officially discouraged because newer or better features exist, or because the deprecated feature is no longer considered safe. (ex: the <center> tag is an officially deprecated tag that should no longer be used)
+HTML validator,,checks that an HTML document conforms to the standard. Good practice is to use tools like W3C Markup Validator to check document conformance.
