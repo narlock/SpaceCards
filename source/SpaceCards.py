@@ -3,7 +3,7 @@
 # anthonynarlock.com
 # github.com/narlock/SpaceCards
 
-# Date: 1/17/2022
+# Date: 1/18/2022
 
 from asyncore import write
 import os
@@ -112,6 +112,10 @@ class SpaceCards:
         self.root.mainloop()
 
     #Starts the program
+    #Pack forgets the components of the welcome screen,
+    #Packs the components for the main screen
+    #Upon enter, user is prompted to open their user file
+        #This will load their settings, username, etc.
     def start(self):
         self.filename = askopenfilename()
         if(self.filename == ""):
@@ -137,6 +141,8 @@ class SpaceCards:
         self.learn_mode.pack(side=RIGHT)
         self.test_label.pack()
 
+    #Reads the profile file
+    #Stores the attributes in class array variable
     def read_profile_file(self):
         #Read profile information
         file = open(self.filename)
@@ -148,7 +154,13 @@ class SpaceCards:
         self.profile_name = self.profile_attributes[0]
         self.profile_name_label['text'] = self.profile_name
 
-    #TODO Opens dialog window to create a profile, will write profile information to file
+    #TODO
+    #Rewrite profile settings to file
+    #This will save the settings of the user
+    def rewrite_profile_file(self):
+        pass
+
+    #Opens dialog window to create a profile, will write profile information to file
     def create_profile(self):
         win = Toplevel()
         win.title("Create Profile")
