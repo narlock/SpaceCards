@@ -214,6 +214,13 @@ class SpaceCards:
 
     #Opens the deck creating feature
     #Creates a new toplevel window, with options to create a new deck
+        # Creating a deck:
+        # User will fill in entry for deck name, this will be the deck's filename
+        # User then will enter front and back of the cards in the deck,
+        # selecting 'save card' to put it in the deck.
+        # After the user has put all the cards they want in the deck,
+        # the user can hit 'create deck' and the deck will now be
+        # available to study
     def create_new_deck(self):
         win = Toplevel()
         win.geometry("500x300")
@@ -240,25 +247,23 @@ class SpaceCards:
         back_of_card_entry.pack()
 
         def save_card():
-            #TODO DEBUG THIS
             new_cards.append(Card(front_of_card_entry.get(), back_of_card_entry.get()))
-            front_of_card_entry.delete(1)
-            back_of_card_entry.delete(1)
+            front_of_card_entry.delete(0, 'end')
+            back_of_card_entry.delete(0, 'end')
             print("New Cards: ")
             for card in new_cards:
-                print(card)
+                print("CARD: " + card.front + ", " + card.back)
 
         save_card_button = Button(win, text="Save Card", command=save_card)
         save_card_button.pack()
 
         def write_deck_information():
-            #TODO DEBUG THIS
             file = open("./sample-decks/" + deck_name_entry.get() + ".txt", "w")
             for card in new_cards:
                 if card == new_cards[-1]:
                     file.write(card.front + ",," + card.back)
-            else:
-                file.write(card.front + ",," + card.back + "\n")
+                else:
+                    file.write(card.front + ",," + card.back + "\n")
 
         create_deck_button = Button(win, text="Create Deck",command=combine_funcs(write_deck_information, win.destroy))
         create_deck_button.pack()

@@ -1,1 +1,3 @@
-apple,,fruitapple,,fruit
+apple,,fruit
+banana,,fruit
+orange,,fruit
