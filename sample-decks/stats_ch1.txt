@@ -1,0 +1,13 @@
+statistics,,the science of collecting, organizing, interpreting, and learning from data
+aspects of statistics,,design: planning how to obtain data to answer the question of interest, description: summarizing the data that is obtained, inference: using sample data to learn about the population.
+population,,a collection of units of interest (adults in Minneapolis, shoes from a factory)
+sample,,a subset of the units of a population
+subjects,,the individual units of a population (an adult, a shoe)
+statistical inference,,the procedure of using a sample to learn about a population
+statistic,,a number that describes a sample. It can be computed from the data, known.
+parameter,,often unknown number that describes the population
+how do we know if a sample is good?,,the sample should be representative of the population. This means that it should be possible to sample every unit of the population. 
+variables,,explanatory variables(independent variable), response variable(dependent variable) (ex: if we measured mother's height and daughter's height:: explanatory var: mother's height, response var: daughter's height)
+experimental study,,a researcher conducts an experiment by assigning subjects to certian experimental conditions and then observing outcomes on the response variable. The experimental conditions are called 'treatments'
+observational study,,the researcher observes values of the response variable and explanatory variables for the sample subjects, without anything being done to the subjects (such as imposing a treatment)
+retrospective study: the researcher uses strictly historical data, data taken over a specific period of time.
