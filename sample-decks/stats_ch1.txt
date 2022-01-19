@@ -11,3 +11,11 @@ variables,,explanatory variables(independent variable), response variable(depend
 experimental study,,a researcher conducts an experiment by assigning subjects to certian experimental conditions and then observing outcomes on the response variable. The experimental conditions are called 'treatments'
 observational study,,the researcher observes values of the response variable and explanatory variables for the sample subjects, without anything being done to the subjects (such as imposing a treatment)
 retrospective study: the researcher uses strictly historical data, data taken over a specific period of time.
+sampling frame,,list of subjects in the population from which the sample is taken, ideally it lists the entire population of interest.
+sampling design,,determines how the sample is selected.
+variable,,any characteristic of a subject in a population
+simple random sampling (srs),,best way of obtaining a sample that is repreentative of the population.
+bias,,when certain outcomes will occur more often in a sample than they do in a population
+response bias,,occurs when the subject gives an incorrect response (perhaps lying) or the way the interviewer asks the questions are confusing or misleading
+convenience sample,,a type of survey that is easy to obtain
+volunteer sample,,most common form of convenience sample, volunteers do not tend to be representative of entire population
