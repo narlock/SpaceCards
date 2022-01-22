@@ -16,3 +16,15 @@ file system,,files/directories are an OS abstraction to make data storing and da
 communication,,two processes connected by a "pipe"- channel processes need to communicate
 system call,,how user programs interact with the operating system
 POSIX,,portable operating system interface
+kernel,,core layer of OS, a library of procedures shared by all user programs (PROTECTED: user code cannot access internal kernel data structures directly) (PRIVLEDGED (like user code): access to all hardware directly, handles interrupts, hardware exceptions) - CPU is either in kernel mode of user-mode
+systems programmer viewpoint,,can use system calls directly (in assembly), executed by the OS (kernel mode), when efficiency demands it, assembly code: x86 "int" instruction, e.g. int 48. C programming language can acces syscall
+abstraction,,high-level construct; useful, easy-to-use, hides lower-level detial. PL: class or structure data-type.
+process,,an executing program: container for computing resources (process tree)
+threads,,an executing system of instructions normally within process
+synchronization,,concurrency(processes/threads run together) and shared resources (think of the road intersection example - need sync to function)
+file systen,,files/directories are an OS abstraction to make data storing and data sharing easier. They are abstracting the disk!
+communication,,"pipe between 2 processes and a process flows between them"
+memory management,,memory allocated to progrtams - abstraction - virtual memory
+system calls,,how programs interact with the OS, C-Unix provides library interface to syscall to avoid messiness; read(), open()
+unix standards,POSIX
+taming complexity,,"systems", OS, Internet, ATC:: granularity, modularity, abstraction, layering, heirarchy, complexity

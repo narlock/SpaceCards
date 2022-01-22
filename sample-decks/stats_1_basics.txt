@@ -19,3 +19,9 @@ bias,,when certain outcomes will occur more often in a sample than they do in a 
 response bias,,occurs when the subject gives an incorrect response (perhaps lying) or the way the interviewer asks the questions are confusing or misleading
 convenience sample,,a type of survey that is easy to obtain
 volunteer sample,,most common form of convenience sample, volunteers do not tend to be representative of entire population
+categorial (qualitative) variable,,gender, eye color, car make
+numerical (quantitative) variable,,height, income, weight, gpa
+discrete (quantitative) variable,,form of a set of separate numbers. Example: # hot dogs eaten, # accidents per day
+continuous (quantitative) variable,,variable form an interval. Example: height, blood pressure, amount of rainfall
+frequency table,,a listing of possible values for a variable, together with the number of observations for each variable.
+proportion,,of observations that fall in a certain category is the count of observations in that category divided by the total number of observations

@@ -1,5 +1,0 @@
-orange,,fruit
-apple,,fruit
-tomato,,fruit
-spinach,,vegetable
-lettuce,,vegetable

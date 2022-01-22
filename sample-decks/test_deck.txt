@@ -1,3 +1,0 @@
-apple,,fruit
-banana,,fruit
-orange,,fruit

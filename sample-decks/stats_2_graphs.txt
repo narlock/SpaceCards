@@ -1,0 +1,28 @@
+pie chart,,circle is drawn w/ a slice of pie representing each category % of observations. All percentages should add to 100%. Pie charts make it difficult to compare categories to each other.
+bar graph,,a bar is drawn for each category with the bars height representing the % or count of observation. Bar graphs compare the sizes of each group of categorial variable - easier to read bar graph than pie graph.
+point of graphical summaries,,help us visualize features of distribution for quantitative variables: overall shape and pattern, center and spread, outliers
+Stem and leaf plot,,each observation represented by a "stem" and a "leaf". The stem is the one or more of the leading digits, and the leaf is the final digit.
+histogram,,break up the range of values of a variable into classes and display the count (or percent) of the observations that fall into each class.
+unimodal, symmetric,,shape distribution - curve peak is in the middle and generally equal on both ends of the curve.
+unimodal, right-skewed,,shape distribution - curve peak on LEFT side of representation
+unimodal, left-skewed,,shape distribution - curve peak on RIGHT side of representation
+bimodel,,shape distribution, contains two different 'peaks'
+uniform,,shape distribution, rectangular distribution
+numerical summaries purpose,,provide precice descriptions of the characteristics of distribution
+mean,,the average of all observation (x with a - above it)
+median,,denoted M, the middle number when measurements are ordered from smallest to largest
+range,,difference between largest and smallest observations. Bad: calculates using the most extreme values of dataset. Good: simple measure of spread
+Percentile,, pth percentile of a distribution is the value below which p% of the observations fail
+first quartile (Q1),,25th percentile. Lowest of the 25% of the data lies below Q1. Q1: median of the observations below M.
+second quartile (Q2),,50th percentile = median. 50% of the data are below and 50% are above M.
+third quartile (Q3),,75th percentile. Highest 25% of the data lies above Q3. Q3: median of the observations above M.
+interquartile range (IQR),,the difference between the first and third quartiles. IQR = Q3 - Q1. The larger IQR, the more spread out the data is. IQR is resistant to outliers, since it is caluclated using only the middle 50% of data set.
+5-number summary,,a brief description of the center and spread of a distribution. Gives minimum, Q1, M, Q3, and maximum
+boxplot,,a plot of the 5-number summary. They give us a picture of center and spread, also idea as to the shape of skewness of distribution.
+What does right-skewed imply about the mean and median?,,mean > median
+What does left-skewed imply about the mean and meidan?,,mean < median
+What does symmetric imply about the mean and median?,,mean = median
+side-by-side boxplots,,boxplots for more than one distribution. They allow us to compare the centers and spreads of different distribution
+variance (s^2),,a set of observations is the 'average' of the squared deviations from the other
+standard deviation (s),,distance that a 'tyical' observation falls from mean. S is measured in the same units as the original observations. s>=0. The larger the standard deviation, the greater spread of the data. Not resistant to outliers
+role of probability,,complementary, understand the rudiments of uncertainty in samples to be able to learn about the population.
