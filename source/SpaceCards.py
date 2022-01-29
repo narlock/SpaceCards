@@ -23,7 +23,7 @@ class SpaceCards:
         self.root.geometry("400x385")
         self.root.resizable(False, False)
         self.root.title("SpaceCards INDEV")
-        self.root.iconbitmap("./assets/icon.ico")
+        #self.root.iconbitmap("./assets/icon.ico")
         self.root['background'] = 'light grey'
 
         #Attributes
@@ -51,8 +51,11 @@ class SpaceCards:
         #Welcome Screen
         #Packed by default
         #pack forgotten once Start button is pressed
-        logo = PhotoImage(file="./assets/logo.png")
-        self.label = Label(self.frame0, image=logo)
+
+        #TODO
+        #logo = PhotoImage(file="./assets/logo.png")
+        #self.label = Label(self.frame0, image=logo)
+        self.label = Label(self.frame0, text="Hello")
         self.label['background'] = 'light grey'
         self.label.pack()
         self.title_label = Label(self.frame0, text="By: Anthony Narlock", padx=20, pady=20, font=("Tahoma",12,'bold'))
@@ -101,7 +104,7 @@ class SpaceCards:
         self.learn_mode['background'] = 'pink'
         self.learn_mode.pack_forget()
 
-        self.test_label = Label(self.frame0, text="👽", font=("Arial",40))
+        self.test_label = Label(self.frame0, text="", font=("Arial",40))
         self.test_label['foreground'] = 'green'
         self.test_label['background'] = 'light grey'
         self.test_label.pack_forget()
@@ -166,7 +169,7 @@ class SpaceCards:
         win.title("Create Profile")
         win.resizable(False,False)
         win.geometry("450x200")
-        win.iconbitmap("./assets/icon.ico")
+        #win.iconbitmap("./assets/icon.ico")
         title_label = Label(win, text="Create Profile", font=("Tahoma",16,"bold"))
         title_label.pack()
         name_label = Label(win, text="Profile name: ")
@@ -202,7 +205,7 @@ class SpaceCards:
         win.title("Select Deck")
         win.resizable(False, False)
         win.geometry("450x100")
-        win.iconbitmap("./assets/icon.ico")
+        #win.iconbitmap("./assets/icon.ico")
         instructions_label = Label(win, text="Select the Deck you want to study")
         instructions_label.pack()
 
@@ -227,7 +230,7 @@ class SpaceCards:
         win.geometry("450x100")
         win.resizable(False, False)
         win.title("Import Deck")
-        win.iconbitmap("./assets/icon.ico")
+        #win.iconbitmap("./assets/icon.ico")
         instructions_label = Label(win, text="Paste Link in first Entry, Enter Name of Deck in second Entry")
         instructions_label.pack()
         import_entry = Entry(win,width=40)
@@ -256,7 +259,7 @@ class SpaceCards:
         win.geometry("500x300")
         win.resizable(False, False)
         win.title("Deck Creator")
-        win.iconbitmap("./assets/icon.ico")
+        #win.iconbitmap("./assets/icon.ico")
 
         new_cards = []
 
