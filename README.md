@@ -1,6 +1,6 @@
 <!-- Main Header -->
 <p align="center">
-  <img src="https://i.imgur.com/YAyoFpK.png" width="40%"/>
+  <img src="https://i.imgur.com/YAyoFpK.png" width="60%"/>
 </p>
 
 <p align="center">
