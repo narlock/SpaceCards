@@ -1,6 +1,13 @@
-![alt text](https://i.imgur.com/YAyoFpK.png)
+<!-- Main Header -->
+<p align="center">
+  <img src="https://i.imgur.com/YAyoFpK.png" width="40%"/>
+</p>
 
-> Developed by: <b>Anthony Narlock</b>
+<p align="center">
+by <a href="https://github.com/narlock">narlock</a>
+</p>
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ## Features:
 - Flashcard Software to help develop long-term memory
